@@ -1,9 +1,6 @@
 package pe.edu.cibertec.DSWII_T3_AyalaLuis.model.bd;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -18,6 +15,9 @@ import java.util.Date;
 @Entity
 @Table(name = "empleado")
 public class Empleado {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     Integer idempleado;
     String nombre;
     String apellido;
