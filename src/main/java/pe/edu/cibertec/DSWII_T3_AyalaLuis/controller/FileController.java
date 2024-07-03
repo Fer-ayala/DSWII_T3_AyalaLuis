@@ -14,7 +14,7 @@ import pe.edu.cibertec.DSWII_T3_AyalaLuis.service.FileService;
 
 import java.util.List;
 
-@PreAuthorize("hasRole('GESTOR')")
+//@PreAuthorize("hasRole('GESTOR')")
 @AllArgsConstructor
 @RestController
 @RequestMapping("api/v1/filesimages")

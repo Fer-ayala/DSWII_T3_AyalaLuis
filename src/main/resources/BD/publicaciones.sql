@@ -11,9 +11,10 @@ CREATE TABLE usuario (
 	activo BOOL NULL,
 	CONSTRAINT users_pk PRIMARY KEY (idusuario)
 );
-
-insert into usuario values (1,'layala','luis@ejemplo.com','1234','Luis Fernando','Ayala Loayza',true),
-(2,'bchavez','belen@ejemplo.com','123','Belen','Chavez',true);
+#layala password: 1234
+#bchavez password: 123
+insert into usuario values (1,'layala','luis@ejemplo.com','$2a$12$oRIrlYJed.IUqFqcKQVIe.xXh/8Q0M89U9WvKup0/GkDH416.zYsS','Luis Fernando','Ayala Loayza',true),
+(2,'bchavez','belen@ejemplo.com','$2a$12$K3j4fWMpA7GHHe.q0WNT2erjNpA414.tlY8FiN4FqdWCZLcXs7zKu','Belen','Chavez',true);
 
 CREATE TABLE rol (
 	idrol INT auto_increment NOT NULL,
@@ -21,8 +22,8 @@ CREATE TABLE rol (
 	CONSTRAINT roles_pk PRIMARY KEY (idrol)
 );
 
-insert into rol values (1,'Coordinador'),
-(2,'Gestor');
+insert into rol values (1,'COORDINADOR'),
+(2,'GESTOR');
 
 
 CREATE TABLE usuario_rol (

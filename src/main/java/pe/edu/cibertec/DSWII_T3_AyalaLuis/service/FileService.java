@@ -15,6 +15,10 @@ public class FileService implements IFileService {
 
     @Override
     public void guardarArchivo(MultipartFile archivo) throws Exception {
+        String originalFilename = archivo.getOriginalFilename();
+        if (originalFilename == null || !originalFilename.endsWith(".png")) {
+            throw new IllegalArgumentException("Solo se permiten archivos con extensión .png");
+        }
         Files.copy(archivo.getInputStream(),
                 this.pathFolder.resolve(archivo.getOriginalFilename()));
     }
