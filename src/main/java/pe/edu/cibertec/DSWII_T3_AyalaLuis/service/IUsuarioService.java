@@ -1,0 +1,9 @@
+package pe.edu.cibertec.DSWII_T3_AyalaLuis.service;
+
+import pe.edu.cibertec.DSWII_T3_AyalaLuis.model.bd.Usuario;
+
+public interface IUsuarioService {
+
+    Usuario obtenerUsuarioPorNomUsuario(
+            String nomusuario);
+}
