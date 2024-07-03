@@ -12,12 +12,17 @@ CREATE TABLE usuario (
 	CONSTRAINT users_pk PRIMARY KEY (idusuario)
 );
 
+insert into usuario values (1,'layala','luis@ejemplo.com','1234','Luis Fernando','Ayala Loayza',true),
+(2,'bchavez','belen@ejemplo.com','123','Belen','Chavez',true);
 
 CREATE TABLE rol (
 	idrol INT auto_increment NOT NULL,
 	nomrol varchar(300) NULL,
 	CONSTRAINT roles_pk PRIMARY KEY (idrol)
 );
+
+insert into rol values (1,'Coordinador'),
+(2,'Gestor');
 
 
 CREATE TABLE usuario_rol (
@@ -28,6 +33,7 @@ CREATE TABLE usuario_rol (
 	CONSTRAINT user_role_FK_1 FOREIGN KEY (idrol) REFERENCES rol(idrol)
 );
 
+insert into usuario_rol values (1,2),(2,1);
 
 
 CREATE TABLE Domicilio

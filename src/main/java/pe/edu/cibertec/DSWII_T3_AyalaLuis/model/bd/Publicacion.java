@@ -1,9 +1,6 @@
 package pe.edu.cibertec.DSWII_T3_AyalaLuis.model.bd;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -19,6 +16,8 @@ import java.util.Date;
 @Table(name = "publicacion")
 public class Publicacion {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     Integer idpublicacion;
     String titulo;
     String resumen;
