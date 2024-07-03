@@ -6,4 +6,5 @@ import pe.edu.cibertec.DSWII_T3_AyalaLuis.model.bd.Publicacion;
 
 @Repository
 public interface PublicacionRepository extends JpaRepository<Publicacion,Integer> {
+
 }
